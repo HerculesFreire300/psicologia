@@ -1,0 +1,73 @@
+/* ============================================================
+   footer.css — Rodapé
+   ============================================================ */
+
+footer {
+  background: #070e16;
+  color: rgba(255,255,255,.5);
+  padding: 3rem 5% 2rem;
+  font-size: .78rem;
+}
+.ft-inner { max-width: 1200px; margin: 0 auto; }
+
+.ft-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 2.5rem;
+}
+
+/* Brand */
+.ft-logo-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  color: #fff;
+  letter-spacing: .02em;
+}
+.ft-logo-sub {
+  font-size: .62rem;
+  color: var(--gold);
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  margin-top: 2px;
+  margin-bottom: .7rem;
+}
+.ft-brand p {
+  font-size: .78rem;
+  color: rgba(255,255,255,.38);
+  line-height: 1.7;
+  max-width: 270px;
+}
+
+/* Colunas */
+.ft-col h5 {
+  color: var(--gold-l);
+  font-size: .7rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  margin-bottom: .9rem;
+  font-weight: 600;
+}
+.ft-col a,
+.ft-col p {
+  color: rgba(255,255,255,.48);
+  text-decoration: none;
+  display: block;
+  margin-bottom: .45rem;
+  font-size: .78rem;
+  transition: var(--tr);
+}
+.ft-col a:hover { color: rgba(255,255,255,.8); }
+
+/* Rodapé inferior */
+.ft-bot {
+  border-top: 1px solid rgba(255,255,255,.07);
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: .73rem;
+}
+.crp { color: var(--gold); font-size: .7rem; }

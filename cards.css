@@ -1,0 +1,142 @@
+/* ============================================================
+   cards.css — Cards de Áreas e Depoimentos
+   ============================================================ */
+
+/* ── ÁREAS ── */
+#areas { background: var(--white); }
+
+.areas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4rem;
+  margin-top: 3rem;
+}
+
+.area-card {
+  background: var(--cream);
+  border: 1px solid var(--gray-s);
+  border-radius: var(--r);
+  padding: 1.8rem;
+  transition: var(--tr);
+  position: relative;
+  overflow: hidden;
+}
+.area-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--teal), var(--gold));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: var(--tr);
+}
+.area-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--sh-card);
+  border-color: transparent;
+}
+.area-card:hover::before { transform: scaleX(1); }
+
+.area-icon {
+  width: 50px; height: 50px;
+  background: linear-gradient(135deg, var(--petrol), var(--teal));
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  margin-bottom: 1.1rem;
+  box-shadow: 0 4px 15px rgba(26,74,107,.25);
+}
+
+.area-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--deep);
+  margin-bottom: .7rem;
+  line-height: 1.3;
+}
+
+.area-card ul { list-style: none; }
+.area-card ul li {
+  font-size: .83rem;
+  color: var(--text);
+  padding: 3px 0 3px 13px;
+  position: relative;
+  line-height: 1.5;
+}
+.area-card ul li::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  color: var(--teal);
+  font-weight: 700;
+}
+
+
+/* ── DEPOIMENTOS ── */
+#depoimentos { background: var(--white); }
+
+.depo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4rem;
+  margin-top: 3rem;
+}
+
+.depo-card {
+  background: var(--cream);
+  border: 1px solid var(--gray-s);
+  border-radius: var(--r);
+  padding: 1.7rem;
+  transition: var(--tr);
+  position: relative;
+  overflow: hidden;
+}
+.depo-card::before {
+  content: '\201C';
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 4.5rem;
+  color: var(--teal);
+  opacity: .13;
+  position: absolute;
+  top: -10px; left: 14px;
+  line-height: 1;
+  font-weight: 700;
+}
+.depo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--sh-card);
+}
+
+.stars {
+  color: #f59e0b;
+  font-size: .82rem;
+  margin-bottom: .9rem;
+  letter-spacing: 2px;
+}
+.depo-txt {
+  font-size: .87rem;
+  color: var(--text);
+  line-height: 1.75;
+  font-style: italic;
+  margin-bottom: 1.2rem;
+  font-weight: 300;
+}
+.depo-auth { display: flex; align-items: center; gap: .7rem; }
+.depo-av {
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--petrol), var(--teal));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .8rem;
+  color: #fff;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+.depo-nm { font-size: .8rem;  font-weight: 600; color: var(--deep); }
+.depo-rl { font-size: .7rem; color: var(--gray-m); }

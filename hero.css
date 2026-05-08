@@ -1,0 +1,216 @@
+/* ============================================================
+   hero.css — Seção Hero (Banner Principal)
+   ============================================================ */
+
+#hero {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--deep) 0%, var(--petrol) 45%, var(--teal) 100%);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 100px 5% 60px;
+}
+
+/* Fundos decorativos */
+.h-bg1 {
+  position: absolute; inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle at 20% 80%, rgba(42,122,138,.25) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(201,168,76,.12) 0%, transparent 50%);
+}
+.h-chess {
+  position: absolute; inset: 0;
+  pointer-events: none;
+  opacity: .03;
+  background-image: repeating-conic-gradient(#fff 0% 25%, transparent 0% 50%);
+  background-size: 60px 60px;
+}
+
+/* Grid hero */
+.hero-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* ── Conteúdo ── */
+.hero-content { animation: fadeL 1s ease forwards; }
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  background: rgba(201,168,76,.15);
+  border: 1px solid rgba(201,168,76,.35);
+  color: var(--gold-l);
+  font-size: .73rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 50px;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+h1.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+  letter-spacing: -.01em;
+}
+h1.hero-title em {
+  font-style: italic;
+  color: var(--gold-l);
+}
+
+.hero-tag {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  font-style: italic;
+  color: var(--gold-l);
+  margin-bottom: 1.75rem;
+  font-weight: 400;
+}
+
+.hero-sub {
+  font-size: .97rem;
+  color: rgba(255,255,255,.75);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  max-width: 460px;
+  font-weight: 300;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+/* Stats */
+.hero-stats  { display: flex; gap: 2rem; }
+.stat-n {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: var(--gold-l);
+  line-height: 1;
+}
+.stat-l {
+  font-size: .7rem;
+  color: rgba(255,255,255,.55);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+/* ── Imagem ── */
+.hero-img-wrap {
+  position: relative;
+  animation: fadeR 1s ease forwards;
+  display: flex;
+  justify-content: center;
+}
+.hero-img-frame {
+  position: relative;
+  width: 400px;
+  max-width: 100%;
+}
+.h-bg2 {
+  position: absolute;
+  inset: -15px;
+  background: linear-gradient(135deg, rgba(201,168,76,.2), rgba(42,122,138,.2));
+  border-radius: 30px;
+  transform: rotate(3deg);
+}
+.hero-card {
+  position: relative;
+  background: rgba(255,255,255,.07);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 24px;
+  padding: 8px;
+  overflow: hidden;
+  box-shadow: var(--sh-deep);
+}
+.hero-photo {
+  width: 100%;
+  height: 490px;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 18px;
+  display: block;
+}
+.hero-img-badge {
+  position: absolute;
+  bottom: 22px; left: 50%;
+  transform: translateX(-50%);
+  background: rgba(13,33,55,.85);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(201,168,76,.3);
+  color: #fff;
+  padding: 9px 20px;
+  border-radius: 50px;
+  font-size: .76rem;
+  white-space: nowrap;
+  letter-spacing: .05em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.hero-img-badge b { color: var(--gold-l); }
+
+/* Badge Unimed */
+.unimed-hero {
+  position: absolute;
+  top: 18px; right: 18px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 6px 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,.3);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  z-index: 2;
+}
+.unimed-hero img { height: 24px; width: auto; }
+.unimed-hero span { font-size: .65rem; color: #1a6b2a; font-weight: 700; }
+
+/* ── Logoterapia ── */
+#logoterapia {
+  background: linear-gradient(135deg, var(--deep), var(--petrol));
+  padding: 70px 5%;
+}
+.logo-inner {
+  max-width: 880px;
+  margin: 0 auto;
+  text-align: center;
+}
+.logo-inner .sec-label { justify-content: center; }
+.logo-inner .sec-label::before { display: none; }
+.logo-txt {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.15rem, 2.2vw, 1.6rem);
+  color: rgba(255,255,255,.9);
+  line-height: 1.95;
+  font-weight: 300;
+  font-style: italic;
+  border-left: 3px solid var(--gold);
+  padding: 1.5rem 2.5rem;
+  text-align: left;
+  margin-top: 1.5rem;
+  background: rgba(255,255,255,.04);
+  border-radius: 0 12px 12px 0;
+}

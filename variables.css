@@ -1,0 +1,37 @@
+/* ============================================================
+   variables.css — Tokens de Design
+   Psicólogo Hércules Freire
+   ============================================================ */
+
+:root {
+  /* ── Cores principais ── */
+  --deep:       #0d2137;    /* Azul profundo */
+  --petrol:     #1a4a6b;    /* Azul petróleo */
+  --petrol-l:   #235a80;
+  --teal:       #2a7a8a;    /* Azul-esverdeado terapêutico */
+  --sage:       #4a8c7a;    /* Verde sálvia */
+  --sage-l:     #6aab9a;
+
+  /* ── Dourado (detalhe premium) ── */
+  --gold:       #c9a84c;
+  --gold-l:     #e2c47a;
+
+  /* ── Neutros ── */
+  --cream:      #f8f5ef;
+  --white:      #ffffff;
+  --gray-s:     #e8e4dc;
+  --gray-m:     #9a9590;
+  --text:       #3a3a4a;
+
+  /* ── Sombras ── */
+  --sh-soft:    0 4px 30px rgba(13,33,55,.10);
+  --sh-card:    0 8px 40px rgba(13,33,55,.13);
+  --sh-deep:    0 20px 60px rgba(13,33,55,.20);
+
+  /* ── Raios ── */
+  --r:    16px;
+  --r-sm: 8px;
+
+  /* ── Transição padrão ── */
+  --tr: all .4s cubic-bezier(.25,.46,.45,.94);
+}

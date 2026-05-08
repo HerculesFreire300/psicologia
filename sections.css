@@ -1,0 +1,231 @@
+/* ============================================================
+   sections.css — Seções de Conteúdo
+   (Sobre, Xadrez, Localização, CTA Final)
+   ============================================================ */
+
+/* ── XADREZ ── */
+#xadrez {
+  background: linear-gradient(160deg, var(--deep) 0%, #0a1e35 100%);
+  position: relative;
+  overflow: hidden;
+}
+.chess-pat {
+  position: absolute; inset: 0;
+  pointer-events: none;
+  opacity: .04;
+  background-image: repeating-conic-gradient(rgba(255,255,255,.5) 0% 25%, transparent 0% 50%);
+  background-size: 50px 50px;
+}
+.chess-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+.chess-board {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 5px;
+  max-width: 300px;
+}
+.csq             { aspect-ratio: 1; border-radius: 5px; transition: var(--tr); }
+.csq.dark        { background: rgba(42,122,138,.45); }
+.csq.light       { background: rgba(255,255,255,.07); }
+.csq.gold-sq     { background: var(--gold); opacity: .75; }
+
+.chess-content .sec-label  { color: var(--gold-l); }
+.chess-content .sec-title  { color: #fff; }
+.chess-content .sec-title span { color: var(--sage-l); }
+.chess-content p {
+  color: rgba(255,255,255,.75);
+  font-size: .94rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  font-weight: 300;
+}
+.chess-bens {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .9rem;
+  margin-top: 1.5rem;
+}
+.chess-ben {
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: var(--r-sm);
+  padding: .9rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+}
+.chess-ben span { font-size: .81rem; color: rgba(255,255,255,.82); font-weight: 500; }
+
+
+/* ── SOBRE ── */
+#sobre { background: var(--cream); }
+.sobre-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 5rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+.sobre-img-wrap { position: relative; }
+.sobre-img {
+  width: 100%;
+  height: 470px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 20px;
+  display: block;
+  box-shadow: var(--sh-deep);
+}
+.sobre-acc {
+  position: absolute;
+  bottom: -20px; right: -20px;
+  width: 130px; height: 130px;
+  background: linear-gradient(135deg, var(--teal), var(--sage));
+  border-radius: 50%;
+  opacity: .13;
+  z-index: -1;
+}
+.sobre-content p {
+  font-size: .94rem;
+  color: var(--text);
+  line-height: 1.85;
+  margin-bottom: 1.1rem;
+  font-weight: 300;
+}
+/* Credenciais */
+.creds {
+  display: flex;
+  flex-direction: column;
+  gap: .7rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.75rem;
+}
+.cred {
+  display: flex;
+  align-items: flex-start;
+  gap: .75rem;
+  background: var(--white);
+  border: 1px solid var(--gray-s);
+  border-radius: var(--r-sm);
+  padding: .85rem 1.1rem;
+  box-shadow: 0 4px 20px rgba(13,33,55,.07);
+}
+.cred-ico  { font-size: 1.15rem; flex-shrink: 0; margin-top: 2px; }
+.cred strong { display: block; font-size: .83rem; color: var(--deep); font-weight: 600; }
+.cred span   { font-size: .76rem; color: var(--gray-m); }
+/* Badge Unimed */
+.conv-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .7rem;
+  background: var(--white);
+  border: 1px solid var(--gray-s);
+  border-radius: var(--r-sm);
+  padding: .7rem 1.2rem;
+  box-shadow: 0 4px 20px rgba(13,33,55,.07);
+}
+.conv-badge img  { height: 30px; width: auto; }
+.conv-badge span { font-size: .78rem; color: var(--text); font-weight: 500; }
+
+
+/* ── LOCALIZAÇÃO ── */
+#loc { background: var(--white); }
+.loc-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+  margin-top: 2rem;
+}
+.loc-cards { display: flex; flex-direction: column; gap: .9rem; }
+.loc-c {
+  background: var(--cream);
+  border: 1px solid var(--gray-s);
+  border-radius: var(--r-sm);
+  padding: 1.1rem 1.4rem;
+  display: flex;
+  align-items: flex-start;
+  gap: .9rem;
+}
+.loc-ico {
+  width: 42px; height: 42px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, var(--petrol), var(--teal));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+.loc-c strong { display: block; font-size: .83rem; color: var(--deep); font-weight: 600; margin-bottom: .2rem; }
+.loc-c span   { font-size: .8rem; color: var(--text); line-height: 1.5; }
+/* Mapa */
+.map-e {
+  border-radius: var(--r);
+  overflow: hidden;
+  border: 1px solid var(--gray-s);
+  box-shadow: var(--sh-card);
+  height: 310px;
+}
+.map-e iframe { width: 100%; height: 100%; border: none; display: block; }
+/* Convênio */
+.conv-sec {
+  margin-top: 2rem;
+  padding: 1.75rem;
+  background: var(--cream);
+  border-radius: var(--r);
+  border: 1px solid var(--gray-s);
+}
+.conv-sec h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem;
+  color: var(--deep);
+  margin-bottom: .9rem;
+}
+.conv-logos { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+.conv-logos img { height: 38px; width: auto; object-fit: contain; }
+.conv-logos span { font-size: .83rem; color: var(--text); }
+
+
+/* ── CTA FINAL ── */
+#contato {
+  background: linear-gradient(135deg, var(--petrol) 0%, var(--deep) 50%, #0a1520 100%);
+  text-align: center;
+  padding: 100px 5%;
+  position: relative;
+  overflow: hidden;
+}
+.cta-bg {
+  position: absolute; inset: 0;
+  background: radial-gradient(circle at center, rgba(201,168,76,.1) 0%, transparent 60%);
+}
+.cta-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 680px;
+  margin: 0 auto;
+}
+.cta-inner .sec-label { justify-content: center; color: var(--gold-l); }
+.cta-inner .sec-label::before { display: none; }
+.cta-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  color: #fff;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+.cta-title em { color: var(--gold-l); font-style: italic; }
+.cta-desc {
+  color: rgba(255,255,255,.7);
+  font-size: .97rem;
+  line-height: 1.75;
+  margin-bottom: 2.5rem;
+  font-weight: 300;
+}

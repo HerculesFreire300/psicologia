@@ -1,0 +1,148 @@
+/* ============================================================
+   base.css — Reset & Estilos Globais
+   ============================================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text);
+  background: var(--cream);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+img { max-width: 100%; display: block; }
+
+a { text-decoration: none; }
+
+/* ── Scrollbar personalizada ── */
+::-webkit-scrollbar        { width: 6px; }
+::-webkit-scrollbar-track  { background: var(--cream); }
+::-webkit-scrollbar-thumb  { background: var(--petrol); border-radius: 3px; }
+
+/* ── Seções ── */
+section { padding: 90px 5%; }
+
+.sec-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ── Label de seção ── */
+.sec-label {
+  font-size: .68rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: .7rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.sec-label::before {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 1px;
+  background: var(--gold);
+}
+
+/* ── Título de seção ── */
+.sec-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 600;
+  color: var(--deep);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  letter-spacing: -.01em;
+}
+.sec-title span {
+  color: var(--teal);
+  font-style: italic;
+}
+
+/* ── Descrição de seção ── */
+.sec-desc {
+  font-size: .97rem;
+  color: var(--text);
+  line-height: 1.8;
+  max-width: 560px;
+  font-weight: 300;
+}
+
+/* ── Botões ── */
+.btn-p {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  background: var(--gold);
+  color: var(--deep);
+  font-weight: 700;
+  font-size: .88rem;
+  padding: 15px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  letter-spacing: .03em;
+  transition: var(--tr);
+  box-shadow: 0 6px 25px rgba(201,168,76,.4);
+  border: 2px solid var(--gold);
+}
+.btn-p:hover {
+  background: var(--gold-l);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(201,168,76,.5);
+}
+
+.btn-s {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255,255,255,.35);
+  font-weight: 500;
+  font-size: .88rem;
+  padding: 13px 26px;
+  border-radius: 50px;
+  text-decoration: none;
+  letter-spacing: .03em;
+  transition: var(--tr);
+}
+.btn-s:hover {
+  background: rgba(255,255,255,.1);
+  border-color: rgba(255,255,255,.6);
+  transform: translateY(-2px);
+}
+
+.btn-wa {
+  display: inline-flex;
+  align-items: center;
+  gap: .75rem;
+  background: #25D366;
+  color: #fff;
+  font-weight: 700;
+  font-size: .97rem;
+  padding: 17px 34px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 8px 30px rgba(37,211,102,.4);
+  transition: var(--tr);
+  letter-spacing: .02em;
+}
+.btn-wa:hover {
+  background: #20bd5a;
+  transform: translateY(-3px);
+  box-shadow: 0 14px 40px rgba(37,211,102,.55);
+}

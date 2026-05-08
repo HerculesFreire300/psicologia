@@ -1,0 +1,124 @@
+/* ============================================================
+   agenda.css — Agenda de Consultas
+   ============================================================ */
+
+#agenda { background: var(--cream); }
+
+.ag-wrap {
+  margin-top: 3rem;
+  background: var(--white);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--sh-card);
+  border: 1px solid var(--gray-s);
+}
+
+/* Cabeçalho */
+.ag-head {
+  background: linear-gradient(135deg, var(--deep), var(--petrol));
+  padding: 1.4rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: .75rem;
+}
+.ag-head h3 {
+  font-family: 'Cormorant Garamond', serif;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.ag-leg { display: flex; gap: 1.3rem; }
+.leg-i  { display: flex; align-items: center; gap: 5px; font-size: .73rem; color: rgba(255,255,255,.75); }
+.leg-dot      { width: 9px; height: 9px; border-radius: 50%; }
+.leg-dot.av   { background: #22c55e; }
+.leg-dot.bz   { background: #64748b; }
+
+/* Grid */
+.ag-grid {
+  display: grid;
+  grid-template-columns: 72px repeat(5, 1fr);
+}
+
+/* Cabeçalho colunas */
+.ag-ch {
+  background: rgba(26,74,107,.06);
+  padding: .65rem .4rem;
+  text-align: center;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--petrol);
+  border-bottom: 1px solid var(--gray-s);
+  border-right: 1px solid var(--gray-s);
+}
+.ag-ch:last-child { border-right: none; }
+
+/* Coluna hora */
+.ag-time {
+  background: var(--cream);
+  padding: .65rem;
+  text-align: center;
+  font-size: .73rem;
+  font-weight: 600;
+  color: var(--petrol);
+  border-bottom: 1px solid var(--gray-s);
+  border-right: 1px solid var(--gray-s);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Slots */
+.slot {
+  padding: .45rem .3rem;
+  text-align: center;
+  border-bottom: 1px solid var(--gray-s);
+  border-right: 1px solid var(--gray-s);
+  font-size: .68rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  transition: var(--tr);
+}
+.slot:last-child { border-right: none; }
+
+.slot.busy          { background: rgba(100,116,139,.05); color: var(--gray-m); }
+.slot.busy::after   { content: '—'; color: #cbd5e1; }
+
+.slot.avail {
+  background: rgba(34,197,94,.09);
+  color: #15803d;
+  cursor: pointer;
+  font-weight: 700;
+  border: 1px solid rgba(34,197,94,.25);
+  flex-direction: column;
+  gap: 2px;
+}
+.slot.avail::after {
+  content: 'Disponível';
+  font-size: .6rem;
+  font-weight: 500;
+  color: #16a34a;
+}
+.slot.avail:hover {
+  background: rgba(34,197,94,.2);
+  transform: scale(1.03);
+  box-shadow: 0 2px 12px rgba(34,197,94,.25);
+}
+
+/* Rodapé nota */
+.ag-note {
+  padding: 1.1rem 2rem;
+  background: rgba(201,168,76,.05);
+  border-top: 1px solid rgba(201,168,76,.2);
+  font-size: .78rem;
+  color: var(--gray-m);
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.ag-note::before { content: 'ℹ️'; }

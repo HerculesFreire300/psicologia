@@ -1,0 +1,55 @@
+/* ============================================================
+   responsive.css — Media Queries / Responsividade
+   ============================================================ */
+
+/* ── Tablet ── */
+@media (max-width: 1024px) {
+  .areas-grid  { grid-template-columns: repeat(2, 1fr); }
+  .chess-grid  { grid-template-columns: 1fr; }
+  .chess-board { display: none; }
+  .sobre-grid  { grid-template-columns: 1fr; }
+  .loc-grid    { grid-template-columns: 1fr; }
+  .depo-grid   { grid-template-columns: repeat(2, 1fr); }
+  .ft-grid     { grid-template-columns: 1fr 1fr; }
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  /* Navbar */
+  .nav-links  { display: none; }
+  .hamburger  { display: flex; }
+
+  /* Hero */
+  .hero-wrap       { grid-template-columns: 1fr; text-align: center; gap: 2rem; }
+  .hero-img-wrap   { order: -1; }
+  .hero-img-frame  { width: 270px; }
+  .hero-photo      { height: 320px; }
+  .hero-actions    { justify-content: center; }
+  .hero-stats      { justify-content: center; }
+  .hero-sub        { margin: 0 auto 1.5rem; }
+
+  /* Cards */
+  .areas-grid   { grid-template-columns: 1fr; }
+  .depo-grid    { grid-template-columns: 1fr; }
+  .chess-bens   { grid-template-columns: 1fr; }
+
+  /* Agenda */
+  .ag-grid      { grid-template-columns: 56px repeat(5, 1fr); }
+  .slot         { min-height: 44px; font-size: .6rem; }
+  .ag-ch        { font-size: .58rem; padding: .45rem .2rem; }
+
+  /* Footer */
+  .ft-grid      { grid-template-columns: 1fr; gap: 2rem; }
+  .ft-bot       { flex-direction: column; text-align: center; }
+
+  /* Geral */
+  section       { padding: 60px 5%; }
+  .sobre-grid   { gap: 2rem; }
+}
+
+/* ── Mobile pequeno ── */
+@media (max-width: 480px) {
+  .hero-stats    { flex-wrap: wrap; gap: 1rem; }
+  .hero-img-frame { width: 240px; }
+  .hero-photo    { height: 280px; }
+}
