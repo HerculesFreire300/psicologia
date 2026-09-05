@@ -1,124 +1,35 @@
-# 🧠 Psicólogo Hércules Freire — Site Profissional
+# Site — Hercules Freire | Psicólogo Clínico
 
-Site premium desenvolvido para o psicólogo Hércules Freire,
-com foco em Logoterapia, Dependência Química, Psicologia Infantil,
-ABA/TEA, Xadrez Terapêutico e mais.
+## Estrutura do projeto
 
----
-
-## 📁 Estrutura de Pastas
+Todos os arquivos ficam juntos, na mesma pasta:
 
 ```
-hercules-site/
-│
-├── index.html              ← Página principal (abra aqui)
-│
-├── css/
-│   ├── variables.css       ← Tokens de design (cores, sombras, raios)
-│   ├── base.css            ← Reset, tipografia, botões globais
-│   ├── navbar.css          ← Navbar fixa + menu mobile + botão WhatsApp flutuante
-│   ├── hero.css            ← Seção Hero + seção Logoterapia
-│   ├── sections.css        ← Xadrez, Sobre, Localização, CTA Final
-│   ├── cards.css           ← Cards de Áreas de Atuação + Depoimentos
-│   ├── agenda.css          ← Estilos da Agenda Interativa
-│   ├── footer.css          ← Rodapé
-│   ├── animations.css      ← Keyframes + classes .reveal e delays
-│   └── responsive.css      ← Media queries (tablet e mobile)
-│
-├── js/
-│   ├── navbar.js           ← Scroll compacto + toggle menu mobile
-│   ├── agenda.js           ← Constrói agenda e links WhatsApp dinâmicos
-│   ├── chess-board.js      ← Tabuleiro de xadrez decorativo (6x6)
-│   ├── animations.js       ← Scroll Reveal via IntersectionObserver
-│   └── smooth-scroll.js    ← Rolagem suave em links âncora
-│
-└── assets/
-    ├── foto-hercules.png   ← Foto profissional do psicólogo
-    └── unimed-logo.png     ← Logo da Unimed (convênio)
+projeto-site/
+├── index.html   → página principal
+├── style.css    → todo o estilo visual do site
+├── script.js    → menu mobile, acordeão do FAQ, scroll, animações
+├── hero.jpg     → foto usada na seção inicial (hero)
+├── lab.jpg      → foto usada na seção "Abordagem / Formação"
+└── README.md
 ```
 
----
+## Como abrir no Visual Studio Code
 
-## 🚀 Como rodar no VS Code
+1. Extraia esta pasta em qualquer lugar do seu computador.
+2. Abra o VS Code → **File > Open Folder** → selecione a pasta `projeto-site`.
+3. Instale a extensão **Live Server** (Ritwick Dey), se ainda não tiver.
+4. Clique com o botão direito em `index.html` → **Open with Live Server**.
+5. O site abre no navegador e atualiza sozinho a cada alteração salva.
 
-### Opção 1 — Live Server (recomendado)
-1. Instale a extensão **Live Server** (Ritwick Dey)
-2. Clique com o botão direito em `index.html`
-3. Selecione **"Open with Live Server"**
-4. O site abre automaticamente no navegador em `localhost:5500`
+## O que ainda falta personalizar antes de publicar
 
-### Opção 2 — Abrir direto
-1. Apenas abra o arquivo `index.html` no navegador
-2. (As imagens podem não carregar por restrição CORS — prefira Live Server)
+- **CRP**: já preenchido como `18/05709` em duas partes do site (seção "Sobre" e rodapé) — confira se o formato de exibição é o que o Hercules usa.
+- **Domínio real**: dentro de `index.html`, procure por `hercuslesfreirepsicologo.com.br` (aparece na tag `canonical` e no JSON-LD de SEO) e troque pelo domínio definitivo quando o site for publicado.
+- **Imagem do schema.org**: o campo `"image"` dentro do bloco `<script type="application/ld+json">` também está com uma URL placeholder — depois de publicar, aponte para a URL real da foto hospedada no domínio.
+- **Depoimentos**: os três depoimentos na seção "Depoimentos" são exemplos ilustrativos (nomes fictícios). Troque por relatos reais e autorizados pelos pacientes antes de publicar, respeitando o sigilo profissional (evite nome completo e foto de paciente).
+- **WhatsApp**: o número (65) 99308-5010 já está linkado em todos os botões (`wa.me/5565993085010`) e no botão flutuante.
 
----
+## Publicando o site
 
-## ✏️ Personalizações comuns
-
-### Trocar foto do psicólogo
-Substitua o arquivo `assets/foto-hercules.png` pela nova foto.
-Mantenha o mesmo nome ou atualize o `src` no `index.html`.
-
-### Trocar número de WhatsApp
-Busque e substitua em todos os arquivos:
-```
-556599308510  →  55XXXXXXXXXXX
-```
-(Formato: 55 + DDD + número, sem espaços ou traços)
-
-### Adicionar/remover horários disponíveis
-Edite o objeto `SCHEDULE.available` em `js/agenda.js`:
-```js
-available: {
-  'Segunda': ['13h', '14h'],
-  'Sexta':   ['13h', '14h', '15h', '16h', '17h'],
-}
-```
-
-### Alterar cores
-Edite as variáveis CSS em `css/variables.css`.
-Todas as cores do site usam essas variáveis.
-
----
-
-## 🎨 Paleta de Cores
-
-| Variável      | Cor           | Uso                    |
-|---------------|---------------|------------------------|
-| `--deep`      | `#0d2137`     | Fundos escuros         |
-| `--petrol`    | `#1a4a6b`     | Azul petróleo          |
-| `--teal`      | `#2a7a8a`     | Destaques teal         |
-| `--sage`      | `#4a8c7a`     | Verde sálvia           |
-| `--gold`      | `#c9a84c`     | Dourado premium        |
-| `--cream`     | `#f8f5ef`     | Fundo principal        |
-
----
-
-## 📱 Responsividade
-
-| Breakpoint    | Layout                   |
-|---------------|--------------------------|
-| > 1024px      | Desktop — 3 colunas      |
-| ≤ 1024px      | Tablet — 2 colunas       |
-| ≤ 768px       | Mobile — 1 coluna        |
-| ≤ 480px       | Mobile pequeno           |
-
----
-
-## 🔍 SEO Incluído
-
-- Meta tags completas (description, keywords, robots)
-- Open Graph (compartilhamento em redes sociais)
-- Schema Markup (JSON-LD) para Psicólogo
-- HTML semântico (section, nav, footer, h1→h3)
-- Texto alt nas imagens
-- `loading="lazy"` no iframe do mapa
-
----
-
-## 📞 Contato Configurado
-
-- **WhatsApp:** (65) 99308-5010
-- **Endereço:** CPA III, Cuiabá – MT
-- **Convênio:** Unimed
-- **Atendimento:** Presencial e Online
+Como é um site estático (HTML/CSS/JS puro, sem back-end), pode subir direto em qualquer hospedagem simples: Hostinger, Netlify, Vercel, GitHub Pages, ou dentro do próprio painel da hospedagem que a agência já usa. Basta enviar todos os arquivos desta pasta juntos, sem subpastas.
